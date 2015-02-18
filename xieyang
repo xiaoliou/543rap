@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>543说唱网</title>
+<style>
+#cs_box {width:120px; height:220px; color:#FFF; background:#54a7ff; position:fixed; right:10px; top:100px; border-radius:10px; z-index:1000}
+#cs_box span {height:20px; line-height:20px;display:block;}
+.cs_close {color:#FFF; position:absolute; right:10px; top:8px; cursor:pointer; font-size:20px;font-family:Verdana, Geneva, sans-serif}
+.cs_title {font-size:14px; margin:10px; font-weight:bold;}
+.cs_img {width:100px; height:100px; background:#FFF; margin:10px;background-image:url(http://demo.lanrenzhijia.com/2014/service1119/images/lanrenzhijia.jpg) }
+.cs_info {font-size:12px; margin:0px 10px; overflow:hidden; text-align:center;}
+.cs_btn {width:100px; height:25px; background:#333; margin:5px 10px; border-radius:5px; font-size:12px; line-height:25px; color:#FFF; text-align:center; cursor:pointer;}
+</style>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+img{ border:0;}
+
+.header{ width:100%; background:#F5F5F5;}
+.nav{ width:1000px; margin:0 auto; overflow:hidden;}
+.nav ul li{ height:40px; line-height:40px; float:left; padding:10px 5px; margin:0px 5px;position:relative;}
+.nav ul li a{ color:#666; font-family:'Microsoft Yahei'; font-size:14px; text-decoration:none;}
+.nav ul li a:hover{ color:#000; text-decoration:none;}
+.nav ul li span{ display:block; position:absolute; width:0px; height:0px; background:#1FAEFF; top:58px; left:50%;}
+</style>
+</head>
+<body>
+<div class="header">
+<div class="nav">
+	<ul>
+		<li><a href='index.html'>首页</a><span></span></li>
+    	<li><a href='yk.html'>优酷网</a><span></span></li>
+    	<li><a href='mg.html'>芒果TV</a><span></span></li>
+    	<li><a href='letv.html'>乐视TV</a><span></span></li>
+    	<li><a href='56.html'>56网</a><span></span></li>
+    	<li><a href='pps.html'>PPS影音</a><span></span></li>
+    	<li><a href='tv.html'>电视直播</a><span></span></li>
+    	<li><a href='kkzb.html'>美女秀</a><span></span></li>
+    	<li><a href='music.html'>音乐欣赏</a><span></span></li>
+	</ul>
+</div>
+</div>
+<br>
+<br>
+<div align="center" class="main">
+<div class="wrap">
+<div id="player" style="position:relative;z-index: 100;">
+<iframe scrolling="no" frameborder="0" name="win_vod" id="win_vod" border="0" style="width: 960px; height: 550px" src="http://www.543rap.cc/cmp/cmp.swf?lists=list.xml"></iframe>
+</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.nav li').hover(function(){
+		$('span',this).stop().css('height','2px');
+		$('span',this).animate({
+			left:'0',
+			width:'100%',
+			right:'0'
+		},200);
+	},function(){
+		$('span',this).stop().animate({
+			left:'50%',
+			width:'0'
+		},200);
+	});
+});
+</script>
+<div id='cs_box'>
+	<span class='cs_title'>在线咨询</span>
+	<span class='cs_close'>x</span>
+	<div class='cs_img'></div>
+	<span class='cs_info'>有什么可以帮到你</span>
+	<div class='cs_btn'>点击咨询</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/lanrenzhijia.js"></script>
+<script>
+	myEvent(window,'load',function(){
+		cs_box.set({
+			img_path : 'http://demo.lanrenzhijia.com/2014/service1119/images/lanrenzhijia.jpg',	
+			qq : '1822296466',	//设置QQ号码
+		});
+	});
+
+</body>
+</html>
